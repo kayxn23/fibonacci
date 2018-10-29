@@ -11,14 +11,33 @@ def fibonacci(n)
 
   x = 0
   y = 1
-  z = x + y # z starts with 1
+  z = 1
 
-  while z < n
+  (n - 1).times do
+    z = x + y
     x = y
     y = z
-    z = x + y
   end
   return z
 end
 
-# 0 1 1 2 3 5 8 13 21 34 55 89 144
+# 2 3 5 8 13
+# loop1
+# x = 2
+# y = 3
+# z = x + y
+#
+# loop2
+# y = x + y (5)
+# x = x + 1 (3)
+# z = x + y (8)
+#
+# loop3
+# y = x + y (8)
+# x = x + 1 (4)
+# z = x + y (12)
+#
+# loop4
+# y = x + y (12)
+# x = x + 1 (5)
+# z =
